@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1690986731962' stop='1690986745913'>
+    <name>people:</name>
+    <title>people:</title>
+    <test-cases>
+        <test-case start='1690986731964' status='failed' stop='1690986742072'>
+            <name>Validar request people</name>
+            <title>Validar request people</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986731983' status='failed' stop='1690986742071'>
+                    <name>I send get request "/people"</name>
+                    <title>I send get request "/people"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>timeout of 10000ms exceeded</message>
+                <stack-trace>AxiosError: timeout of 10000ms exceeded
+                    at RedirectableRequest.handleRequestTimeout (E:\QAzando\automacao-codecptjs-api\node_modules\axios\dist\node\axios.cjs:3047:16)
+                    at RedirectableRequest.emit (node:events:514:28)
+                    at Timeout.&lt;anonymous> (E:\QAzando\automacao-codecptjs-api\node_modules\follow-redirects\index.js:169:12)
+                    at listOnTimeout (node:internal/timers:573:17)
+                    at process.processTimers (node:internal/timers:514:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1690986742081' status='passed' stop='1690986745912'>
+            <name>Validar request people 1</name>
+            <title>Validar request people 1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986742084' status='passed' stop='1690986745908'>
+                    <name>I send get request "/people/1"</name>
+                    <title>I send get request "/people/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1690986745908' status='passed' stop='1690986745909'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1690986745909' status='passed' stop='1690986745911'>
+                    <name>I see response contains json {"name":"Luke Skywalker"}</name>
+                    <title>I see response contains json {"name":"Luke Skywalker"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

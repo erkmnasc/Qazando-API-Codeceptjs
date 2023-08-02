@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1690986873260' stop='1690986891675'>
+    <name>people:</name>
+    <title>people:</title>
+    <test-cases>
+        <test-case start='1690986873262' status='failed' stop='1690986883356'>
+            <name>Validar request people</name>
+            <title>Validar request people</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986873278' status='failed' stop='1690986883355'>
+                    <name>I send get request "/people"</name>
+                    <title>I send get request "/people"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>timeout of 10000ms exceeded</message>
+                <stack-trace>AxiosError: timeout of 10000ms exceeded
+                    at RedirectableRequest.handleRequestTimeout (E:\QAzando\automacao-codecptjs-api\node_modules\axios\dist\node\axios.cjs:3047:16)
+                    at RedirectableRequest.emit (node:events:514:28)
+                    at Timeout.&lt;anonymous> (E:\QAzando\automacao-codecptjs-api\node_modules\follow-redirects\index.js:169:12)
+                    at listOnTimeout (node:internal/timers:573:17)
+                    at process.processTimers (node:internal/timers:514:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1690986883359' status='failed' stop='1690986891673'>
+            <name>Validar request people 1</name>
+            <title>Validar request people 1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986883362' status='passed' stop='1690986890938'>
+                    <name>I send get request "/people/1"</name>
+                    <title>I send get request "/people/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1690986890938' status='passed' stop='1690986890939'>
+                    <name>I set request timeout 100000</name>
+                    <title>I set request timeout 100000</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1690986890939' status='passed' stop='1690986890940'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1690986890941' status='failed' stop='1690986891672'>
+                    <name>I see response contains json {"name":"Luke Skywalke"}</name>
+                    <title>I see response contains json {"name":"Luke Skywalke"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>expected { name: 'Luke Skywalker', …(15) } to deeply match { name: 'Luke Skywalke' }</message>
+                <stack-trace>AssertionError: expected { name: 'Luke Skywalker', …(15) } to deeply match { name: 'Luke Skywalke' }
+                    at JSONResponse.seeResponseContainsJson (E:\QAzando\automacao-codecptjs-api\node_modules\codeceptjs\lib\helper\JSONResponse.js:199:42)
+                    at Step.run (E:\QAzando\automacao-codecptjs-api\node_modules\codeceptjs\lib\step.js:122:47)
+                    at E:\QAzando\automacao-codecptjs-api\node_modules\codeceptjs\lib\actor.js:135:23</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

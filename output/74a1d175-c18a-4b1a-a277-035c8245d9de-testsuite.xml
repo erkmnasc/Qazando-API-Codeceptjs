@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1690986824962' stop='1690986845077'>
+    <name>people:</name>
+    <title>people:</title>
+    <test-cases>
+        <test-case start='1690986824965' status='failed' stop='1690986835052'>
+            <name>Validar request people</name>
+            <title>Validar request people</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986824976' status='failed' stop='1690986835052'>
+                    <name>I send get request "/people"</name>
+                    <title>I send get request "/people"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>timeout of 10000ms exceeded</message>
+                <stack-trace>AxiosError: timeout of 10000ms exceeded
+                    at RedirectableRequest.handleRequestTimeout (E:\QAzando\automacao-codecptjs-api\node_modules\axios\dist\node\axios.cjs:3047:16)
+                    at RedirectableRequest.emit (node:events:514:28)
+                    at Timeout.&lt;anonymous> (E:\QAzando\automacao-codecptjs-api\node_modules\follow-redirects\index.js:169:12)
+                    at listOnTimeout (node:internal/timers:573:17)
+                    at process.processTimers (node:internal/timers:514:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1690986835056' status='failed' stop='1690986845075'>
+            <name>Validar request people 1</name>
+            <title>Validar request people 1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1690986835058' status='failed' stop='1690986845075'>
+                    <name>I send get request "/people/1"</name>
+                    <title>I send get request "/people/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>timeout of 10000ms exceeded</message>
+                <stack-trace>AxiosError: timeout of 10000ms exceeded
+                    at RedirectableRequest.handleRequestTimeout (E:\QAzando\automacao-codecptjs-api\node_modules\axios\dist\node\axios.cjs:3047:16)
+                    at RedirectableRequest.emit (node:events:514:28)
+                    at Timeout.&lt;anonymous> (E:\QAzando\automacao-codecptjs-api\node_modules\follow-redirects\index.js:169:12)
+                    at listOnTimeout (node:internal/timers:573:17)
+                    at process.processTimers (node:internal/timers:514:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
