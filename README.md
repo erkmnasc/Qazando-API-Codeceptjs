@@ -1,64 +1,36 @@
-# Automação de testes para Api's com codeceptsJS
+# Testes de API com CodeceptJS
 
-Projeto realizado no curso Trilha QA da Qazando.
+[![API tests](https://github.com/erkmnasc/Qazando-API-Codeceptjs/actions/workflows/ci.yml/badge.svg)](https://github.com/erkmnasc/Qazando-API-Codeceptjs/actions/workflows/ci.yml)
 
-## 🚀 Começando
+Projeto do curso Trilha QA da Qazando. Testes de API REST com CodeceptJS
+(helpers REST e JSONResponse) na [SWAPI](https://swapi.dev).
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+## Cenários
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+Arquivo `people_test.js`:
 
-## ⚙️ Executando os testes
+- lista de pessoas responde com sucesso e traz `count` e `results`
+- `/people/1` responde com sucesso, tem as chaves esperadas e os dados do
+  Luke Skywalker
+- pessoa inexistente responde 404
 
-Explicar como executar os testes automatizados para este sistema.
+## Como rodar
 
-### Baixando o projeto
+Precisa de Node.js 18 ou mais novo.
 
-```
-git clone https://github.com/erkmnasc/Qazando-API-Codeceptjs
-```
-
-### 🔩 Analise os testes de ponta a ponta
-
-Para executar os testes digite:
-
-```
-npx codeceptjs run --plugins allure
+```bash
+npm install
+npm test
 ```
 
+Relatório com Allure (precisa do Allure instalado):
 
-Para abrir os relátorios digite:
-
-```
+```bash
+npm run test:allure
 allure serve output
 ```
 
-## 🛠️ Construído com
+## CI
 
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [CodeceptJS](https://codecept.io/)
-* [Java Development Kit 8](https://www.oracle.com/br/java/technologies/javase-jdk8-doc-downloads.html)
-
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **QA** - *Automação* - *Documentação* - [Erick Nascimento]
-
-GitHub - (https://github.com/erkmnasc)
-
-Linkedin - (https://www.linkedin.com/in/erick-nascimento/)
-
-GitShowCase - (https://www.gitshowcase.com/erkmnasc)
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
----
-⌨️ com ❤️ por [Erick Nascimento](https://github.com/erkmnasc) 😊
+O GitHub Actions roda os testes a cada push na `main`, em pull requests e
+manualmente (`.github/workflows/ci.yml`).

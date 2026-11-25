@@ -1,14 +1,15 @@
 Feature('people');
 
 Scenario('Validar request people',  ({ I }) => {
-    I.sendGetRequest('/people')
     I.setRequestTimeout(20000)
+    I.sendGetRequest('/people')
     I.seeResponseCodeIsSuccessful()
+    I.seeResponseContainsKeys(['count', 'results'])
 });
 
 Scenario('Validar request people 1',  ({ I }) => {
-    I.sendGetRequest('/people/1')
     I.setRequestTimeout(20000)
+    I.sendGetRequest('/people/1')
     I.seeResponseCodeIsSuccessful()
     I.seeResponseContainsKeys(['name', 'height'])
     I.seeResponseContainsJson({
@@ -16,4 +17,10 @@ Scenario('Validar request people 1',  ({ I }) => {
         birth_year: '19BBY',
         gender: 'male',
     })
+});
+
+Scenario('Validar request de pessoa inexistente', ({ I }) => {
+    I.setRequestTimeout(20000)
+    I.sendGetRequest('/people/9999')
+    I.seeResponseCodeIs(404)
 });
