@@ -25,5 +25,5 @@ npm test
 
 ## CI
 
-O GitHub Actions roda os testes a cada push na `main`, em pull requests e
-manualmente (`.github/workflows/ci.yml`).
+O GitHub Actions roda os testes a cada push na `main`, em pull requests, manualmente e
+toda segunda-feira (`.github/workflows/ci.yml`).
