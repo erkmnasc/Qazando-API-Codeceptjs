@@ -16,18 +16,11 @@ Arquivo `people_test.js`:
 
 ## Como rodar
 
-Precisa de Node.js 18 ou mais novo.
+Precisa de Node.js 20 ou mais novo.
 
 ```bash
 npm install
 npm test
-```
-
-Relatório com Allure (precisa do Allure instalado):
-
-```bash
-npm run test:allure
-allure serve output
 ```
 
 ## CI

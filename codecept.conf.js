@@ -19,11 +19,5 @@ exports.config = {
   include: {
     I: './steps_file.js'
   },
-  name: 'backend',
-  plugins: {
-    allure: {
-      enabled: true,
-      require: '@codeceptjs/allure-legacy',
-    }
-  }
+  name: 'backend'
 }

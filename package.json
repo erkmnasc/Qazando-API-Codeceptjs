@@ -4,13 +4,16 @@
   "description": "Testes de API REST com CodeceptJS na SWAPI (curso Trilha QA da Qazando)",
   "private": true,
   "scripts": {
-    "test": "codeceptjs run --steps",
-    "test:allure": "codeceptjs run --plugins allure"
+    "test": "codeceptjs run --steps"
   },
   "author": "Erick Nascimento",
   "license": "MIT",
   "devDependencies": {
-    "@codeceptjs/allure-legacy": "^1.0.2",
-    "codeceptjs": "^3.7.9"
+    "codeceptjs": "^4.2.5"
+  },
+  "overrides": {
+    "uuid": "^11.1.1",
+    "glob": "^14.0.6",
+    "minimatch": "^11.0.9"
   }
 }
